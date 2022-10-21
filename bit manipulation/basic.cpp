@@ -114,6 +114,7 @@ printbit(a | (1<<2));
 // 10010 --for first bit -- so we need somethong like 
 // 11101 -- !(00010) -- (~(1<<1)) == ~=!
 printbit(a&(~(1<<1)));
+ //togle
 
 
 }
