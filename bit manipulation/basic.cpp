@@ -92,7 +92,7 @@ for (int c = 4; c >= 0; c--)
   cout<<endl;
 }
 int main(){
-  int a = 18;
+  int a = 15;
 printbit(a);
 int i =3;
 // to check if ith bit is 1 or set bit 
@@ -115,6 +115,22 @@ printbit(a | (1<<2));
 // 11101 -- !(00010) -- (~(1<<1)) == ~=!
 printbit(a&(~(1<<1)));
  //togle
+// 1 ko 0 or 0 ko 1
+// xor lenge 1 1 ^ 0,0 0 ^1, 1 0 ^ 1,0 1 ^ 1
+printbit(a^(1<<2));
+printbit(a^(1<<3));
 
+// bit count 
+// calculate the no of set bit
+int ct =0;
+for(int i =31;i>=0;--i){
+  if((a & (1<<i)) != 0){
+    ct++;
+  }
+}
+cout << ct << endl;
+// built in funvtio
+cout<< __builtin_popcount(a)<<endl;
+cout<< __builtin_popcountll((1ll<<35)-1)<<endl;
 
 }
