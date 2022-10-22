@@ -84,20 +84,20 @@
 using namespace std;
 
 void printbit(int n){
-for (int c = 4; c >= 0; c--)
+for (int c = 8; c >= 0; c--)
   {
-    cout<<((n >> c)&1);
+    cout<<((n >> c)&1); // 1101 >> 1  0110 >>1 0011 >> 0001 // right shift
   }
 
   cout<<endl;
 }
 int main(){
-  int a = 15;
+  int a = 123;
 printbit(a);
 int i =3;
 // to check if ith bit is 1 or set bit 
 
-if((a&(1<<i))){
+if((a&(1<<i))){      // left shift   // a = 1101 & (1<<1)  0001 <<1 = 0010   -> 1101 & 0010 = 0   1<<2 = 0100 = 1
   cout<<"set bit\n";
 }
 else
@@ -132,5 +132,17 @@ cout << ct << endl;
 // built in funvtio
 cout<< __builtin_popcount(a)<<endl;
 cout<< __builtin_popcountll((1ll<<35)-1)<<endl;
+
+// to check the no is even or odd
+
+
+
+
+
+
+
+
+
+
 
 }
