@@ -105,7 +105,7 @@ cout<<"not set bit\n";
 
 //bit set
 // if we have to make some particular bit 1
-// 10010 if we want to second bit 1 
+// 10010 if we want to make second bit 1 
 // 10010 0r(|) 00100  so now how we will get 00100
 // if we do 1<<2 i.e 00001 << 1 = 00010<<1 = 00100
 printbit(a | (1<<2));
@@ -129,20 +129,36 @@ for(int i =31;i>=0;--i){
   }
 }
 cout << ct << endl;
+
+
 // built in funvtio
-cout<< __builtin_popcount(a)<<endl;
-cout<< __builtin_popcountll((1ll<<35)-1)<<endl;
+// cout<< __builtin_popcount(a)<<endl;
+// cout<< __builtin_popcountll((1ll<<35)-1)<<endl;
 
 // to check the no is even or odd
 
+// 1000 & 1 = 0
+//1111 & 1 = 1
 
-
-
-
-
-
-
-
-
-
+for(int i =0;i<6;i++)
+{
+  printbit(i);
+  if(i&1){
+    cout <<"odd\n";
+  }
+  else{
+  cout <<"even\n";
+  }
 }
+
+//convert uppercase to lowercase and lowecase to uppercase
+
+
+
+
+
+
+
+
+
+};
